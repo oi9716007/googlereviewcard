@@ -524,12 +524,8 @@ const CONTACT = {
   set('c-mail','mailto:'+CONTACT.email+'?subject=Google%20Review%20NFC');
 })();
 
-// initial language: saved > browser > de
-let start = 'de';
-try{ const s = localStorage.getItem('rt_lang'); if(s) start = s; else {
-  const n = (navigator.language||'de').slice(0,2); if(I18N[n]) start = n;
-}}catch(e){}
-apply(start);
+// initial language: always German by default when the page opens
+apply('de');
 </script>
 </body>
 </html>
